@@ -1,0 +1,221 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Portfolio Home{% endblock %}
+
+{% block contents %}
+
+<!-- HERO SECTION: Full-screen welcome -->
+<header id="hero" class="hero-full-height d-flex flex-column justify-content-center align-items-center text-center bg-light text-dark">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Build the Future: <span class="text-primary">Future Engineer</span></h1>
+        <p class="lead mb-5">
+            This space showcases my engineering work and dedication to technical innovation.
+        </p>
+        <!-- Illustration / 3D placeholder -->
+        <div class="hero-illustration bg-white border border-secondary rounded-3 shadow-sm d-flex align-items-center justify-content-center" style="height: 300px; max-width: 600px; margin: auto;">
+            <span class="text-muted">ILLUSTRATION / 3D MODEL PLACEHOLDER</span>
+        </div>
+    </div>
+</header>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-5 border-bottom pb-3">My Projects</h2>
+
+        <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Project 1 Title</h5>
+                        <div class="bg-secondary rounded mb-3" style="height: 150px;"></div>
+                        <p class="card-text">A concise description of Project 1, highlighting key technologies or results.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Project 2 Title</h5>
+                        <div class="bg-secondary rounded mb-3" style="height: 150px;"></div>
+                        <p class="card-text">A concise description of Project 2, highlighting key technologies or results.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Project 3 Title</h5>
+                        <div class="bg-secondary rounded mb-3" style="height: 150px;"></div>
+                        <p class="card-text">A concise description of Project 3, highlighting key technologies or results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="btn btn-primary btn-lg">View All Projects</button>
+        </div>
+    </div>
+</section>
+
+<!-- OTHER TEXT SECTION -->
+<section id="about" class="py-5 bg-light border-top">
+    <div class="container text-center">
+        <h2 class="mb-4">Key Skills & Experience</h2>
+        <p class="lead mx-auto" style="max-width: 700px;">
+            This section is dedicated to a brief summary of professional skills, technologies, and methodologies.
+            It serves as a transition to the footer/contact section.
+        </p>
+    </div>
+</section>
+
+{% endblock %}
+
+
+/* ==========================
+   1. HERO SECTION
+   ========================== */
+#hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 60px;
+}
+
+/* Floating blob illustration */
+.cloud-illustration {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50% 20% / 10% 40%;
+    padding: 4rem;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+
+/* ==========================
+   2. NAVBAR
+   ========================== */
+.navbar {
+    background-color: #000 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    min-height: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-brand {
+    border: 2px solid white;
+    padding: 5px 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Profile icon vertical alignment */
+.navbar-nav .dropdown-toggle {
+    padding: 0 4px !important;
+    margin: 0 !important;
+    height: 60px;
+    line-height: 60px;
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.navbar-nav .dropdown-toggle i.fa-user-circle {
+    vertical-align: middle;
+}
+
+/* Remove caret */
+.navbar-nav .dropdown-toggle::after {
+    display: none !important;
+}
+
+
+/* ==========================
+   3. DROPDOWN MENU
+   ========================== */
+.dropdown-menu-dark-custom {
+    background-color: #2c2c2c !important;
+    border: 1px solid #444;
+    border-radius: 8px;
+    min-width: 180px;
+    margin-top: 0 !important;
+    z-index: 1050;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.dropdown-menu-dark-custom h6,
+.dropdown-menu-dark-custom .dropdown-item {
+    color: #fff !important;
+}
+
+.dropdown-menu-dark-custom .dropdown-item:hover {
+    background-color: #444;
+}
+
+
+/* ==========================
+   4. DASHBOARD
+   ========================== */
+#dashboard {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.work-card {
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+/* ==========================
+   5. FOOTER
+   ========================== */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 40px 0;
+    border-top: 3px solid #444;
+}
+
+/* Make profile dropdown float BELOW the navbar on mobile */
+@media (max-width: 991px) {  /* Matches Bootstrap's lg breakpoint */
+
+    .navbar .dropdown-menu {
+        position: fixed !important;
+        top: 60px !important;      /* Navbar height */
+        right: 15px !important;    /* Align near right side */
+        left: auto !important;
+        width: 220px;              /* Optional — looks nice */
+        z-index: 2000 !important;  /* Ensure it appears on top */
+    }
+
+    /* Prevent navbar from stretching tall */
+    .navbar-nav .dropdown {
+        position: static !important;
+    }
+}

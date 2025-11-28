@@ -1,0 +1,36 @@
+<!-- templates/finance_app/initial_setup.html -->
+ 
+{% extends 'base.html' %}
+{% block title %}Initial Setup{% endblock %}
+
+{% block contents %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 py-4">
+            <h2 class="text-center mb-4">Initial Financial Setup</h2>
+            <p class="text-center text-muted">This page is for setting up your first account and base currency for the finance application.</p>
+            <div class="card shadow-sm p-4">
+                <form method="post">
+                    {% csrf_token %}
+                    <!-- Placeholder form fields -->
+                    <div class="mb-3">
+                        <label class="form-label">Account Name</label>
+                        <input type="text" class="form-control" placeholder="e.g., Main Checking">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Base Currency</label>
+                        <select class="form-select">
+                            <option>USD - US Dollar</option>
+                            <option>JPY - Japanese Yen</option>
+                            <option>EUR - Euro</option>
+                        </select>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success">Save Setup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

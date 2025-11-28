@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Portfolio Home{% endblock %}
+
+{% block contents %}
+
+<!-- HERO SECTION: Full-screen welcome -->
+<header id="hero" class="hero-full-height d-flex flex-column justify-content-center align-items-center text-center bg-light text-dark">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Build the Future: <span class="text-primary">Future Engineer</span></h1>
+        <p class="lead mb-5">
+            This space showcases my engineering work and dedication to technical innovation.
+        </p>
+        <!-- Illustration / 3D placeholder -->
+        <div class="hero-illustration bg-white border border-secondary rounded-3 shadow-sm d-flex align-items-center justify-content-center" style="height: 300px; max-width: 600px; margin: auto;">
+            <span class="text-muted">ILLUSTRATION / 3D MODEL PLACEHOLDER</span>
+        </div>
+    </div>
+</header>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-5 border-bottom pb-3">My Projects</h2>
+
+        <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Project 1 Title</h5>
+                        <div class="bg-secondary rounded mb-3" style="height: 150px;"></div>
+                        <p class="card-text">A concise description of Project 1, highlighting key technologies or results.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Project 2 Title</h5>
+                        <div class="bg-secondary rounded mb-3" style="height: 150px;"></div>
+                        <p class="card-text">A concise description of Project 2, highlighting key technologies or results.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Project 3 Title</h5>
+                        <div class="bg-secondary rounded mb-3" style="height: 150px;"></div>
+                        <p class="card-text">A concise description of Project 3, highlighting key technologies or results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="btn btn-primary btn-lg">View All Projects</button>
+        </div>
+    </div>
+</section>
+
+<!-- OTHER TEXT SECTION -->
+<section id="about" class="py-5 bg-light border-top">
+    <div class="container text-center">
+        <h2 class="mb-4">Key Skills & Experience</h2>
+        <p class="lead mx-auto" style="max-width: 700px;">
+            This section is dedicated to a brief summary of professional skills, technologies, and methodologies.
+            It serves as a transition to the footer/contact section.
+        </p>
+    </div>
+</section>
+
+{% endblock %}

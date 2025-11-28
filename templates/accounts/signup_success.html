@@ -1,0 +1,15 @@
+<!-- templates/accounts/signup_success.html -->
+
+{% extends 'base.html' %}
+{% block title %}Registration Complete{% endblock %}
+{% block contents %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center py-4">
+            <h3 class="mb-4">Registration Complete!</h3>
+            <p><a href="{% url 'accounts:login' %}" class="btn btn-primary">Log In Here</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    

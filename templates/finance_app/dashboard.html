@@ -1,0 +1,39 @@
+<!-- templates/finance_app/dashboard.html -->
+
+{% extends 'base.html' %}
+{% block title %}Finance Dashboard{% endblock %}
+
+{% block contents %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Financial Dashboard</h1>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="card-title text-primary">{{ current_account_name }} ({{ currency }})</h2>
+                    <!-- floatformat:2 is used for currency display -->
+                    <p class="card-text fs-4">Current Balance: <span class="fw-bold">{{ balance|floatformat:2 }} {{ currency }}</span></p>
+                    <hr>
+                    <h3 class="mt-3">Total Portfolio Value</h3>
+                    <p class="fs-3 fw-bold text-success">{{ total_value|floatformat:2 }} {{ base_currency }}</p>
+
+                    <div class="d-flex justify-content-start gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-success">Deposit</a>
+                        <a href="#" class="btn btn-outline-danger">Withdraw</a>
+                        <a href="#" class="btn btn-outline-info">Transfer</a>
+                        <a href="#" class="btn btn-outline-secondary">Switch Account</a> 
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Placeholder for transactions/charts -->
+            <div class="card shadow-sm mt-4">
+                <div class="card-header">Recent Transactions</div>
+                <div class="card-body">
+                    <p class="text-muted">Transaction list and charts will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

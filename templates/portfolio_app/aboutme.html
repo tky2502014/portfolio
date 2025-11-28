@@ -1,0 +1,32 @@
+<!-- templates/portfolio_app/aboutme.html -->
+ 
+{% extends 'base.html' %}
+{% block title %}About Me{% endblock %}
+
+{% block contents %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 py-4">
+            <h1 class="text-center mb-4">About the Developer</h1>
+            <div class="card shadow-sm p-4">
+                <p class="lead">
+                    Hello! I'm a developer specializing in full-stack web applications, particularly using Python/Django and modern frontend frameworks. 
+                    This portfolio site is built to showcase my ability to create secure, scalable, and well-designed applications.
+                </p>
+                
+                <h4 class="mt-4 text-primary">Core Skills</h4>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item"><strong>Backend:</strong> Python, Django, REST APIs</li>
+                    <li class="list-group-item"><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Bootstrap</li>
+                    <li class="list-group-item"><strong>Database:</strong> PostgreSQL, MySQL, SQLite</li>
+                    <li class="list-group-item"><strong>Deployment:</strong> Docker, CI/CD, AWS/GCP</li>
+                </ul>
+
+                <p class="text-muted small">
+                    The authentication system (Login, Logout, Sign Up, Password Reset) demonstrates robust Django security practices.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
