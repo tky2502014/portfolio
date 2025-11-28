@@ -125,7 +125,7 @@ LOGIN_URL = 'accounts:login'
 # After successful login, redirects user to the URL pattern named 'dashboard'
 LOGIN_REDIRECT_URL = 'accounts:mypage' 
 # After successful logout, redirects user to the URL pattern named 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'portfolio_app:home'
 
 # Email Backend (Console for testing)
 # Temporarily set to console to see emails in the terminal
